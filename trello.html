@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(126, 184, 162);
+        font-family: "Poppins", sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      form {
+        width: 60%;
+        margin: 4rem auto;
+        text-align: center;
+      }
+
+      .container > div {
+        width: 20%;
+        -webkit-box-shadow: 10px 14px 29px -6px rgb(50 99 83);
+        -moz-box-shadow: -2px 10px 31px -8px rgba(184, 184, 184, 1);
+
+        background-color: #fff;
+        text-align: center;
+      }
+
+      .container > div h2 {
+        padding: 20px;
+      }
+
+      .inProgress h2 {
+        background: orange;
+      }
+
+      .onHold h2 {
+        background: red;
+      }
+
+      .review h2 {
+        background: yellow;
+      }
+
+      .approved h2 {
+        background: green;
+      }
+
+      div {
+        min-height: 250px;
+        list-style: none;
+      }
+
+      p {
+        padding: 20px;
+        border: 1px solid grey;
+      }
+
+      input[type="text"] {
+        padding: 10px 20px;
+        width: 55%;
+      }
+
+      button {
+        padding: 10px 20px;
+        color: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="trello.js" defer></script>
+    <form id="form">
+      <input type="text" placeholder="enter Project Name" id="textVal" />
+      <button type="submit" id="btn">ADD</button>
+    </form>
+    <section class="container" id="container">
+      <div class="inProgress">
+        <h2 class="h2-style gold">In Progress</h2>
+        <div class="tasksSection" id="inProgress"></div>
+      </div>
+      <div class="onHold">
+        <h2 class="h2-style red">On Hold</h2>
+        <div class="tasksSection" id="hold"></div>
+      </div>
+      <div class="review">
+        <h2 class="h2-style blue">In Review</h2>
+        <div class="tasksSection" id="review"></div>
+      </div>
+      <div class="approved">
+        <h2 class="h2-style green">Approved</h2>
+        <div class="tasksSection" id="approved"></div>
+      </div>
+    </section>
+  </body>
+</html>
